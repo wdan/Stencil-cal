@@ -2,9 +2,9 @@
 #define _MAXTRIX_CAL_H
 
 #define R 2
-#define DX 20
-#define DY 20
-#define DT 10 
+#define DX 500
+#define DY 500
+#define DT 250 
 #define BIG_PRIME 29927
 
 #define Malloc(type, n) (type *)malloc((n)*sizeof(type))
@@ -18,13 +18,17 @@
                  _a > _b ? _a : _b; })
 struct _arg_step{
     double  ***map;
+    /* track of toggle array */
     int     old;
+    /* start_x, start_y, end_x, end_y */
     int     st_x, st_y, ed_x, ed_y;
     int     times;
 };
 struct _arg_step3{
     double  ***map;
+    /* track of toggle array */
     int     old;
+    /* start_x, start_y */
     int     st_x, st_y;
     int     times;
 };
